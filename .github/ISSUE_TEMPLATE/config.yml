@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: 💬 GitHub 讨论区 (Discussions)
+    url: https://github.com/auto-dev/agent-dev-guide/discussions
+    about: 欢迎前往讨论区分享你的智能体学习心得、交流架构方案或寻求技术答疑！

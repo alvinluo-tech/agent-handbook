@@ -1,0 +1,29 @@
+{
+  "name": "agent-dev-guide",
+  "private": true,
+  "version": "1.1.0",
+  "type": "module",
+  "scripts": {
+    "predev": "node tools/sync-resource-summary.mjs",
+    "dev": "vite",
+    "prebuild": "node tools/sync-resource-summary.mjs",
+    "build": "vite build",
+    "lint": "oxlint",
+    "preview": "vite preview",
+    "check": "node tools/check-data.mjs && node tools/audit-cited-diff.mjs && node tools/final-check.mjs",
+    "release": "node tools/release.mjs",
+    "add:paper": "node tools/add-paper.mjs",
+    "download:papers": "node tools/papers.mjs"
+  },
+  "dependencies": {
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.7",
+    "@vitejs/plugin-react": "^6.1.1",
+    "oxlint": "^1.81.0",
+    "vite": "^8.3.0"
+  }
+}

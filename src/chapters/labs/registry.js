@@ -1,0 +1,70 @@
+// 实战工坊 · 项目注册表
+// qid 接入全站 LV/EXP 系统(App.jsx 会把这里的 quests 也计入经验值)
+
+export const LABS = [
+  {
+    key: 'p1',
+    qid: 'lab-p1',
+    icon: '🎧',
+    code: 'LAB.01',
+    title: 'ATLAS · 智能客服中台',
+    en: 'ENTERPRISE SUPPORT AGENT — RAG, TOOLS, ESCALATION, GUARDRAILS, EVALS',
+    brief: 'RAG × 工具调用 × 人工升级 × 双层护栏 × 评测闭环。面向 B2B SaaS 客服场景的教学实现，重点是可控与可验证。',
+    level: '★★★☆☆',
+    weeks: '2-3 周',
+    rivals: 'Intercom Fin / Decagon / Sierra',
+    scene: 'B2B SaaS 客服',
+    quests: [
+      '能说清为什么客服 Agent 用「路由 + 受控分支」而不是自由 ReAct',
+      '能独立实现 pgvector + 全文检索的混合召回与 RRF 融合',
+      '能设计「强制引用 + 拒答模板」的防幻觉输出策略',
+      '能写出升级人工的三类触发条件与上下文打包格式',
+      '能搭建 golden set + LLM-as-judge 的回归评测并在 CI 中运行',
+      '能算清单次会话成本账并说出三个降本手段',
+    ],
+  },
+  {
+    key: 'p2',
+    qid: 'lab-p2',
+    icon: '🔬',
+    code: 'LAB.02',
+    title: 'SCOUT · 深度研究局',
+    en: 'DEEP RESEARCH MULTI-AGENT — ORCHESTRATOR-WORKER, BUDGET, CITATIONS',
+    brief: '编排者-执行者多智能体、token 预算制、引用台账、交叉校验。对标 OpenAI/Anthropic Deep Research 的教学实现。',
+    level: '★★★★☆',
+    weeks: '2-3 周',
+    rivals: 'OpenAI Deep Research / Anthropic Research / Gemini DR',
+    scene: '投研 / 咨询 / 市场调研',
+    quests: [
+      '能画 SCOUT 的 orchestrator-worker 架构并说明上下文为何隔离',
+      '能实现「澄清 → 研究计划 JSON → 预算分配」的规划链路',
+      '能用 asyncio + 信号量实现带预算的并行子代理',
+      '能实现引用台账:URL 去重、claim→source 映射、保留未核验来源并标注结论',
+      '能区分 Anthropic 历史成本基线与本项目实测，并给出预算止损手段',
+      '能区分 rubric、来源可访问率与引用支持率，并人工校准',
+    ],
+  },
+  {
+    key: 'p3',
+    qid: 'lab-p3',
+    icon: '🛡️',
+    code: 'LAB.03',
+    title: 'SENTINEL · 代码审查哨兵',
+    en: 'CODE REVIEW AGENT — WEBHOOK, DIFF CONTEXT, ANTI-HALLUCINATION, REPLAY EVALS',
+    brief: 'GitHub webhook 驱动审查、规则 + LLM 双引擎、证据自检与回放评测。首轮时延和评论质量需在本仓库实测。',
+    level: '★★★★☆',
+    weeks: '2-3 周',
+    rivals: 'CodeRabbit / Greptile / Qodo Merge',
+    scene: '研发效能 / DevOps',
+    quests: [
+      '能实现 GitHub webhook 验签 + delivery id 幂等消费',
+      '能写 unified diff 解析器并按 hunk 组织审查上下文',
+      '能说出「评论信噪比」为何是审查 Agent 的生死线,并给出三道防线',
+      '能实现 finding 自校验:证据不足的评论直接丢弃',
+      '能识别 diff 中的提示注入攻击面并给出分层防御',
+      '能搭建「注入已知 bug 的 PR」回放评测,算出 recall/precision',
+    ],
+  },
+]
+
+export const LAB_TOTAL_QUESTS = LABS.reduce((n, l) => n + l.quests.length, 0)

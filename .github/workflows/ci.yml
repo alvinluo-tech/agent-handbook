@@ -1,0 +1,44 @@
+name: CI Quality Gate
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  audit-and-build:
+    name: Verify Data, Integrity and Production Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm ci || npm install
+
+      - name: 1. Validate Data Schemas (Papers & Projects)
+        run: node tools/check-data.mjs
+
+      - name: 2. Check Cited arXiv vs Library Difference
+        run: node tools/audit-cited-diff.mjs
+
+      - name: 3. Verify All 14 System Gates
+        run: node tools/final-check.mjs
+
+      - name: 4. Code Quality & Lint
+        run: npm run lint || true
+
+      - name: 5. Production Build
+        run: npm run build

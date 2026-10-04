@@ -1,0 +1,232 @@
+[
+  {
+    "file": "README.md",
+    "added": 23,
+    "removed": 6
+  },
+  {
+    "file": "src/App.jsx",
+    "added": 11,
+    "removed": 10
+  },
+  {
+    "file": "src/chapters/Ch01.jsx",
+    "added": 3,
+    "removed": 3
+  },
+  {
+    "file": "src/chapters/Ch02.jsx",
+    "added": 22,
+    "removed": 24
+  },
+  {
+    "file": "src/chapters/Ch03.jsx",
+    "added": 2,
+    "removed": 2
+  },
+  {
+    "file": "src/chapters/Ch04.jsx",
+    "added": 4,
+    "removed": 4
+  },
+  {
+    "file": "src/chapters/Ch05.jsx",
+    "added": 48,
+    "removed": 33
+  },
+  {
+    "file": "src/chapters/Ch06.jsx",
+    "added": 15,
+    "removed": 12
+  },
+  {
+    "file": "src/chapters/Ch07.jsx",
+    "added": 14,
+    "removed": 12
+  },
+  {
+    "file": "src/chapters/Ch08.jsx",
+    "added": 35,
+    "removed": 21
+  },
+  {
+    "file": "src/chapters/Ch09.jsx",
+    "added": 3,
+    "removed": 3
+  },
+  {
+    "file": "src/chapters/Ch10.jsx",
+    "added": 3,
+    "removed": 3
+  },
+  {
+    "file": "src/chapters/Ch11.jsx",
+    "added": 4,
+    "removed": 4
+  },
+  {
+    "file": "src/chapters/Ch12.jsx",
+    "added": 3,
+    "removed": 3
+  },
+  {
+    "file": "src/chapters/Ch13.jsx",
+    "added": 11,
+    "removed": 10
+  },
+  {
+    "file": "src/chapters/Ch14.jsx",
+    "added": 18,
+    "removed": 18
+  },
+  {
+    "file": "src/chapters/Ch15.jsx",
+    "added": 23,
+    "removed": 14
+  },
+  {
+    "file": "src/chapters/Ch16.jsx",
+    "added": 11,
+    "removed": 11
+  },
+  {
+    "file": "src/chapters/Ch17.jsx",
+    "added": 24,
+    "removed": 17
+  },
+  {
+    "file": "src/chapters/Ch18.jsx",
+    "added": 9,
+    "removed": 9
+  },
+  {
+    "file": "src/chapters/Ch19.jsx",
+    "added": 8,
+    "removed": 8
+  },
+  {
+    "file": "src/chapters/GlossaryPage.jsx",
+    "added": 13,
+    "removed": 13
+  },
+  {
+    "file": "src/chapters/index.js",
+    "added": 3,
+    "removed": 3
+  },
+  {
+    "file": "src/chapters/labs/diag.jsx",
+    "added": 11,
+    "removed": 11
+  },
+  {
+    "file": "src/chapters/labs/labbits.jsx",
+    "added": 6,
+    "removed": 6
+  },
+  {
+    "file": "src/chapters/labs/LabsPage.jsx",
+    "added": 3,
+    "removed": 3
+  },
+  {
+    "file": "src/chapters/labs/overview.jsx",
+    "added": 8,
+    "removed": 8
+  },
+  {
+    "file": "src/chapters/labs/p1a.jsx",
+    "added": 20,
+    "removed": 8
+  },
+  {
+    "file": "src/chapters/labs/p1b.jsx",
+    "added": 125,
+    "removed": 70
+  },
+  {
+    "file": "src/chapters/labs/p1c.jsx",
+    "added": 6,
+    "removed": 6
+  },
+  {
+    "file": "src/chapters/labs/p2a.jsx",
+    "added": 26,
+    "removed": 14
+  },
+  {
+    "file": "src/chapters/labs/p2b.jsx",
+    "added": 43,
+    "removed": 38
+  },
+  {
+    "file": "src/chapters/labs/p2c.jsx",
+    "added": 54,
+    "removed": 46
+  },
+  {
+    "file": "src/chapters/labs/p3a.jsx",
+    "added": 56,
+    "removed": 15
+  },
+  {
+    "file": "src/chapters/labs/p3b.jsx",
+    "added": 15,
+    "removed": 20
+  },
+  {
+    "file": "src/chapters/labs/p3c.jsx",
+    "added": 7,
+    "removed": 7
+  },
+  {
+    "file": "src/chapters/labs/registry.js",
+    "added": 5,
+    "removed": 5
+  },
+  {
+    "file": "src/chapters/PapersPage.jsx",
+    "added": 5,
+    "removed": 5
+  },
+  {
+    "file": "src/chapters/ProjectsPage.jsx",
+    "added": 10,
+    "removed": 6
+  },
+  {
+    "file": "src/components/Diag.jsx",
+    "added": 13,
+    "removed": 13
+  },
+  {
+    "file": "src/components/Diag2.jsx",
+    "added": 25,
+    "removed": 21
+  },
+  {
+    "file": "src/data/projects.json",
+    "added": 2,
+    "removed": 2
+  },
+  {
+    "file": "tools/audit-freshness.mjs",
+    "added": 30,
+    "removed": 31
+  },
+  {
+    "file": "tools/check-data.mjs",
+    "added": 1,
+    "removed": 0
+  },
+  {
+    "file": "tools/gh-projects.mjs",
+    "added": 2,
+    "removed": 2
+  },
+  {
+    "file": "WORKLOG.md",
+    "added": 10,
+    "removed": 0
+  }
+]

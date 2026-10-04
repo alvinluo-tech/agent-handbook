@@ -1,0 +1,17 @@
+import { readFileSync } from 'node:fs';
+import { join, dirname } from 'node:path';
+import { fileURLToPath } from 'node:url';
+const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
+const d1 = readFileSync(join(ROOT, 'src/components/Diag.jsx'), 'utf8');
+const d2 = readFileSync(join(ROOT, 'src/components/Diag2.jsx'), 'utf8');
+const i2 = d1.indexOf('FIG.02');
+const seg = d1.slice(i2, i2 + 3200);
+console.log('--- FIG.02 axis labels ---');
+for (const m of seg.matchAll(/<T x=\{(\d+)\} y=\{(\d+)\}[^>]*>([^<]*控制流[^<]*)</g)) console.log('label:', m[1], m[2], m[3].slice(0, 40));
+console.log('viewBox:', (seg.match(/vb="[^"]+"/) || [])[0]);
+const i7 = d2.indexOf('MemGPT 隐喻');
+console.log('--- FIG.07 caption ctx ---');
+console.log(JSON.stringify(d2.slice(i7 - 140, i7 + 60)));
+const i8 = d2.indexOf('LLM 生成答案');
+console.log('--- FIG.08 LLM box ctx ---');
+console.log(JSON.stringify(d2.slice(i8 - 320, i8 + 60)));

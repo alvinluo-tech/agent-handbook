@@ -1,0 +1,90 @@
+{
+  "version": "1.1.0",
+  "releaseDate": "2026-10-03",
+  "codename": "Enterprise & Open Standards",
+  "snapshotDate": "2026-10-03",
+  "license": "MIT",
+  "author": "Auto-Dev Agent Engineering Team",
+  "stats": {
+    "chapters": 19,
+    "labs": 3,
+    "papers": 88,
+    "projects": 68,
+    "diagrams": 21,
+    "codeFiles": 44
+  },
+  "semverPolicy": "遵循 Semantic Versioning 2.0.0 规范：主版本号变更代表重大架构/章节重构，次版本号代表新增完整章节/实战项目/重磅功能，修订号代表内容勘误/补录论文/UI样式细节优化。",
+  "releases": [
+    {
+      "version": "v1.1.0",
+      "date": "2026-10-03",
+      "type": "minor",
+      "title": "全站全面终验与开源发布规范就绪",
+      "tag": "LATEST",
+      "summary": "完成全站 28 个路由与死角场景的深度终验，建立符合一流开源项目标准的文档管理、版本追踪、社区规范与 CI/CD 自动化流水线。",
+      "changes": [
+        "【文档管理】新增 UI 内置「版本与文档管理中心」(#versions)，支持语义化版本迭代追踪与开源贡献规范",
+        "【核心体验】实现多环境剪贴板降级方案（clipboard.js），解决受限环境与移动端代码一键复制稳定性",
+        "【无障碍修复】重构章节与工坊的标题层级（H1 → H2），彻底清除跳转断层，达到 WCAG AA 标准",
+        "【样式重构】全站链接样式最佳实践改造（语义深青高亮、去底线、金色像素荧光悬停、↗ 外链指示器）",
+        "【视觉审查】21 张原创 SVG 图解与 9 张论文原著图高精度无缝适配，全站移动端与桌面端零横向溢出",
+        "【工程基建】配套 GitHub CI/CD 自动化流水线、标准 MIT License、多场景 Issue/PR 模板与贡献指南"
+      ]
+    },
+    {
+      "version": "v1.0.5",
+      "date": "2026-10-02",
+      "type": "patch",
+      "title": "像素图标系统与交互细节优化",
+      "tag": "STABLE",
+      "summary": "引入专属定制的手绘像素图标组件，全面升级视觉质感，修复多端布局边界与细节交互缺陷。",
+      "changes": [
+        "【图标系统】引入 30 个 16×16 纯手绘矢量像素图标（PixelIcon），全面替换原生 Emoji 导航",
+        "【响应式优化】修复图解滚动容器在桌面端的宽度继承问题，保障宽屏下大图居中与清晰展示",
+        "【交互体验】优化通关清单与经验值等级（LV1~LV10）联动系统，强化持久化存储与离线状态同步",
+        "【论文补强】补录 NeMo Guardrails、HyDE 与最新提示词注入防御代表作，正文引用差集清零"
+      ]
+    },
+    {
+      "version": "v1.0.0",
+      "date": "2026-09-28",
+      "type": "major",
+      "title": "正式立项发布 · 智能体工程师全指南",
+      "tag": "INITIAL",
+      "summary": "一套系统化、面向工业落地与核心原理的像素风交互式全栈智能体开发指南正式上线。",
+      "changes": [
+        "【主线攻略】全套 19 篇深度主线章节上线，覆盖核心定义、心跳循环、上下文工程、工具使用、沙箱、记忆、多智能体与评测体系",
+        "【实战工坊】推出 3 大企业级工业教学项目：ATLAS 智能客服中台、SCOUT 深度研究局、SENTINEL 代码审查哨兵",
+        "【论文军火库】整理收录 88 篇经典与前沿论文，支持分类筛选、即时搜索与本地 PDF 下载",
+        "【GitHub兵器谱】收录 68 个高星活跃智能体框架与运行时工具库，提供多维选型建议与维护状态快照",
+        "【交互组件】配备 Agent Loop 终端动态仿真器、全套 SVG 架构图解与通关清单激励系统"
+      ]
+    }
+  ],
+  "contributionTypes": [
+    {
+      "type": "添加/更新论文",
+      "location": "src/data/papers.json",
+      "cli": "npm run add:paper <arXiv-id>",
+      "desc": "推荐具有代表性的一线智能体论文，需包含题目、分类、作者与导读要点。"
+    },
+    {
+      "type": "推荐开源项目",
+      "location": "src/data/projects.json",
+      "cli": "npm run add:project <owner/repo>",
+      "desc": "推荐在生产中广泛使用或具备突破性架构的高星开源项目。"
+    },
+    {
+      "type": "章节修订与勘误",
+      "location": "src/chapters/Ch*.jsx",
+      "cli": "直接修改后提 PR",
+      "desc": "纠正过期模型版本、失效参数或文字表述，提升内容的精准度与前沿性。"
+    },
+    {
+      "type": "新增实战教学项目",
+      "location": "src/chapters/labs/",
+      "cli": "遵循 registry.js 结构注册",
+      "desc": "提供可运行、可评测、带 ADR 决策与真实业务场景约束的工程教学模块。"
+    }
+  ]
+}

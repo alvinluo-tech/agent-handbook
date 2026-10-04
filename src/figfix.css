@@ -1,0 +1,8 @@
+/* 图解显示修复(R15):隔离文件,防止并行整写 styles.css 时被吞。
+   桌面端图解按容器 100% 缩放完整显示;窄屏(≤880px)保持 960px 下限横向滚动。 */
+.figure-scroll svg { width: 100% !important; height: auto !important; min-width: 0 !important; }
+@media (max-width: 880px) {
+  .figure-scroll svg { width: auto !important; min-width: 960px !important; }
+}
+.figure:fullscreen .figure-scroll svg,
+.figure-expanded .figure-scroll svg { width: auto !important; min-width: 1200px !important; }
