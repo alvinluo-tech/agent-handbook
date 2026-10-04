@@ -10,7 +10,7 @@
 
 <p align="center">
   <a href=".github/workflows/ci.yml"><img src="https://img.shields.io/badge/CI-Passing-brightgreen?style=flat-square&logo=githubactions" alt="CI Status" /></a>
-  <a href=".github/workflows/deploy.yml"><img src="https://img.shields.io/badge/Deploy-GitHub%20Pages-blue?style=flat-square&logo=github" alt="GitHub Pages" /></a>
+  <a href="https://vercel.com"><img src="https://img.shields.io/badge/Deploy-Vercel-black?style=flat-square&logo=vercel" alt="Deploy to Vercel" /></a>
   <a href="src/data/version.json"><img src="https://img.shields.io/badge/Version-v1.1.0-blueviolet?style=flat-square" alt="Version v1.1.0" /></a>
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square" alt="License: MIT" /></a>
   <a href="package.json"><img src="https://img.shields.io/badge/React-19.2-61dafb?style=flat-square&logo=react" alt="React 19" /></a>
@@ -121,13 +121,18 @@ npm run preview
 
 本项目为纯前端静态应用，支持部署至任意主流托管平台：
 
-### 1. 部署到 GitHub Pages (自动化 CI/CD)
-本项目已预置 `.github/workflows/deploy.yml`。只需在 GitHub 仓库中：
-1. 进入仓库 **Settings -> Pages**；
-2. 在 **Build and deployment -> Source** 选择 **GitHub Actions**；
-3. 向 `main` 分支推送代码，流水线将自动完成构建与全球发布。
+### 1. 部署到 Vercel (推荐，零配置极速上线)
+本项目原生针对 Vercel 进行了优化适配，享有全球边缘 CDN 加速与 PR 自动化分支预览体验：
+1. 登录 [Vercel 控制台](https://vercel.com/)，点击 **Add New -> Project**；
+2. 授权并选择导入你的 GitHub 仓库 `alvinluo-tech/agent-handbook`；
+3. Framework Preset 会被自动检测为 **Vite**；
+4. 保持标准默认配置即可：
+   - **Build Command**: `npm run build`
+   - **Output Directory**: `dist`
+   - **Install Command**: `npm install`
+5. 点击 **Deploy**，约 30 秒即可构建完成并获得全球 HTTPS 访问链接（支持一键绑定个性化自定义域名）。
 
-### 2. 部署到 Vercel / Netlify / Cloudflare Pages
+### 2. 部署到 Cloudflare Pages / Netlify / 其他静态托管
 - **Build Command**: `npm run build`
 - **Output Directory**: `dist`
 - **Root Directory**: `./`
